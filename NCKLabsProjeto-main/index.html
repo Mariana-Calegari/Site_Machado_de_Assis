@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machado de Assis: Vida, Obras e Pensamento</title>
+  <meta name="description" content="Site sobre a vida, as obras e o pensamento de Machado de Assis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&amp;display=swap">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&amp;display=swap">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script>
+    // Ativa as animações apenas com JavaScript e sem a preferência "reduzir movimento".
+    // Se o script principal não carregar em 4 s, o conteúdo aparece sem animação.
+    document.documentElement.classList.add("js");
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anim");
+    setTimeout(function () { if (!window.__machadoPronto) document.documentElement.classList.remove("anim"); }, 4000);
+  </script>
+  <script id="lenis-js" src="https://unpkg.com/lenis@1.3.19/dist/lenis.min.js" async></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <a class="logo" href="index.html" aria-label="Machado de Assis: Vida, Obras e Pensamento — página inicial">
+      <span class="logo__marca" aria-hidden="true"></span>
+      <span class="logo__texto">machado de assis</span>
+    </a>
+    <div class="cabecalho__direita">
+      <nav class="cabecalho__nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Página inicial</a></li>
+          <li><a href="obras.html">Obras</a></li>
+          <li><a href="conversa.html">Converse com Machado</a></li>
+          <li><a href="opinioes.html">Opiniões e Resenhas</a></li>
+        </ul>
+      </nav>
+      <button class="botao-menu" type="button" aria-expanded="false" aria-controls="menu-modal" aria-label="Abrir menu">
+        <span class="botao-menu__texto">Menu</span>
+        <span class="botao-menu__icone" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="titulo-inicio">
+      <div class="container grade-12 hero__grade">
+        <div class="hero__texto">
+          <p class="eyebrow" data-anim="fade">Literatura brasileira · 1839–1908</p>
+          <h1 id="titulo-inicio" class="hero__titulo hero__titulo--longo" data-anim="linhas" data-passo="140"><span class="hero__kicker">Machado de Assis:</span> Vida, Obras e <span class="acento">Pensamento</span></h1>
+          <p class="hero__lead texto texto--lg" data-anim="palavras" data-atraso="500" data-passo="18">Machado de Assis é um dos maiores nomes da literatura brasileira. Sua obra reúne romances, contos, poemas, crônicas, críticas e peças teatrais. Ao longo de sua trajetória, o escritor observou com ironia e profundidade as relações humanas, as aparências sociais, as disputas de poder e as contradições da sociedade brasileira.</p>
+          <div class="botoes" data-anim="fade-up" data-atraso="800">
+            <a class="btn btn--solido" href="#sobre">Conheça Machado <span class="btn__seta" aria-hidden="true">→</span></a>
+            <a class="btn btn--vazado" href="obras.html">Explore as obras <span class="btn__seta" aria-hidden="true">→</span></a>
+            <a class="btn btn--vazado" href="conversa.html">Converse com Machado <span class="btn__seta" aria-hidden="true">→</span></a>
+            <a class="btn btn--vazado" href="opinioes.html">Deixe sua opinião <span class="btn__seta" aria-hidden="true">→</span></a>
+          </div>
+          <dl class="fatos hero__fatos" data-anim="fade" data-atraso="1000">
+            <div><dt>Nascimento</dt><dd>21 de junho de 1839, Rio de Janeiro</dd></div>
+            <div><dt>Morte</dt><dd>29 de setembro de 1908, Rio de Janeiro</dd></div>
+            <div><dt>Academia</dt><dd>Fundador da cadeira nº 23</dd></div>
+          </dl>
+        </div>
+        <div class="hero__imagem">
+          <figure data-anim="placa" data-atraso="200">
+            <div class="placa placa--topo" style="--ratio: 3 / 4"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Machado_de_Assis_by_Marc_Ferrez_%28cropped_3x4%29.jpg/1280px-Machado_de_Assis_by_Marc_Ferrez_%28cropped_3x4%29.jpg" alt="Retrato fotográfico de Machado de Assis, de barba e óculos, em trajes formais" loading="lazy" referrerpolicy="no-referrer"></div>
+            <figcaption class="legenda">Machado de Assis, fotografado por Marc Ferrez, c. 1890. Marc Ferrez · domínio público · Wikimedia Commons.</figcaption>
+          </figure>
+          <!-- Sugestão visual: retrato em domínio público, com legenda, crédito e texto alternativo. -->
+        </div>
+        <p class="hero__dica" data-anim="fade" data-atraso="1400" aria-hidden="true">Role para continuar</p>
+      </div>
+    </section>
+
+    <section class="secao secao--declaracao" aria-labelledby="titulo-site">
+      <div class="container container--estreito">
+        <h2 id="titulo-site" class="eyebrow" data-anim="fade">Sobre este site</h2>
+        <p class="declaracao__texto" data-anim="palavras" data-passo="30">Este site apresenta a vida de Machado de Assis, suas principais obras e as transformações de sua escrita ao longo do tempo. Aqui, você poderá conhecer os romances de sua primeira fase, geralmente associada à aproximação com o Romantismo, e os livros de sua fase madura, frequentemente relacionados ao Realismo.</p>
+      </div>
+    </section>
+
+    <section class="destaque tema-escuro" aria-labelledby="titulo-destaque">
+      <div class="container grade-12 destaque__grade">
+        <div class="destaque__texto">
+          <p class="eyebrow" data-anim="fade">Leia Machado</p>
+          <h2 id="titulo-destaque" class="destaque__titulo" data-anim="linhas">Leia Machado de Assis e descubra como a literatura pode revelar as complexidades da vida em sociedade.</h2>
+          <p class="destaque__corpo" data-anim="palavras">Navegue pelas páginas, conheça as obras, consulte as referências e compartilhe sua opinião sobre os livros que você já leu.</p>
+          <div class="botoes" data-anim="fade-up" data-atraso="300">
+            <a class="btn btn--solido" href="obras.html">Explore as obras <span class="btn__seta" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="destaque__imagem">
+          <figure data-anim="placa">
+            <div class="placa placa--topo" style="--ratio: 3 / 4"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Machado_de_Assis_1904.jpg/1280px-Machado_de_Assis_1904.jpg" alt="Fotografia de Machado de Assis em 1904" loading="lazy" referrerpolicy="no-referrer"></div>
+            <figcaption class="legenda">Machado de Assis em 1904. Fundo Correio da Manhã. Autor desconhecido · domínio público · Wikimedia Commons.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="secao" aria-labelledby="titulo-sobre">
+      <div class="container">
+        <div class="grade-12 duas-colunas">
+          <div class="duas-colunas__esq">
+            <p class="eyebrow" data-anim="fade">Sobre Machado</p>
+            <h2 id="titulo-sobre" class="titulo-secao" data-anim="linhas">Sobre Machado de <span class="acento">Assis</span></h2>
+          </div>
+        </div>
+
+        <section class="grade-12 duas-colunas" style="margin-top: 4rem" aria-labelledby="titulo-quem">
+          <div class="duas-colunas__esq">
+            <h3 id="titulo-quem" class="titulo-medio" data-anim="linhas">Quem foi Machado de Assis?</h3>
+          </div>
+          <div class="duas-colunas__dir">
+            <p class="texto" data-anim="palavras" data-passo="10">Joaquim Maria Machado de Assis nasceu no Rio de Janeiro, em 21 de junho de 1839, e morreu na mesma cidade, em 29 de setembro de 1908. Foi jornalista, contista, cronista, romancista, poeta, crítico literário e teatrólogo. Também foi o fundador da cadeira número 23 da Academia Brasileira de Letras e ocupou a presidência da instituição por mais de dez anos. <sup><a href="#ref-1">[1]</a></sup></p>
+            <p class="texto" data-anim="palavras" data-passo="10">Machado de Assis nasceu em uma família de poucos recursos e teve uma formação escolar irregular. Mesmo sem frequentar cursos regulares por muito tempo, estudou como pôde e construiu uma trajetória intelectual marcada pela leitura, pelo trabalho na imprensa e pela convivência com escritores e jornalistas de seu tempo.</p>
+            <p class="texto" data-anim="palavras" data-passo="10">Sua carreira literária começou ainda jovem. Em 1854, publicou seu primeiro trabalho conhecido, o soneto “À Ilma. Sra. D. P. J. A.”, no Periódico dos Pobres. Depois, trabalhou como aprendiz de tipógrafo, revisor, jornalista e colaborador de diversos periódicos. Essa experiência na imprensa contribuiu para a formação de seu estilo atento à linguagem, à observação social e ao diálogo com o leitor. <sup><a href="#ref-1">[1]</a></sup></p>
+            <p class="texto" data-anim="palavras" data-passo="10">A produção de Machado de Assis atravessou praticamente todos os gêneros literários. Ele publicou poesia, contos, romances, crônicas, crítica e teatro. Por isso, sua obra permite diferentes caminhos de leitura e continua sendo estudada por leitores, professores e pesquisadores.</p>
+          </div>
+        </section>
+
+        <div class="fotos">
+          <figure data-anim="placa" data-atraso="0">
+            <div class="placa placa--topo" style="--ratio: 4 / 5"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Machado_de_assis_1874.jpg" alt="Retrato raro de Machado de Assis sem barba, aos 35 anos" loading="lazy" referrerpolicy="no-referrer"></div>
+            <figcaption class="legenda">Aos 35 anos, em 1874. Autor desconhecido · domínio público · Wikimedia Commons.</figcaption>
+          </figure>
+          <figure data-anim="placa" data-atraso="100">
+            <div class="placa placa--topo" style="--ratio: 4 / 5"><img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Machado_de_Assis_aos_57_anos.jpg" alt="Retrato de Machado de Assis aos 57 anos" loading="lazy" referrerpolicy="no-referrer"></div>
+            <figcaption class="legenda">Aos 57 anos, c. 1896. Autor desconhecido · domínio público · Wikimedia Commons.</figcaption>
+          </figure>
+          <figure data-anim="placa" data-atraso="200">
+            <div class="placa placa--topo" style="--ratio: 4 / 5"><img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Retrato_de_Machado_de_Assis_%281905%29%2C_por_H._Bernardelli.jpg" alt="Pintura a óleo de Machado de Assis já idoso, por Henrique Bernardelli" loading="lazy" referrerpolicy="no-referrer"></div>
+            <figcaption class="legenda">Aos 66 anos, retrato pintado por Henrique Bernardelli, 1905. Henrique Bernardelli · domínio público · Wikimedia Commons.</figcaption>
+          </figure>
+        </div>
+
+        <dl class="fatos fatos--4 fatos--ledger" data-anim="fade-up">
+          <div><dt>Nome completo</dt><dd>Joaquim Maria Machado de Assis</dd></div>
+          <div><dt>Cidade</dt><dd>Rio de Janeiro, 1839–1908</dd></div>
+          <div><dt>Ofícios</dt><dd>Jornalista, contista, cronista, romancista, poeta, crítico e teatrólogo</dd></div>
+          <div><dt>Academia Brasileira de Letras</dt><dd>Fundador da cadeira nº 23 e primeiro presidente</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="titulo-trajetoria">
+      <div class="container grade-12 duas-colunas duas-colunas--meio">
+        <div class="duas-colunas__esq">
+          <figure data-anim="placa">
+            <div class="placa" style="--ratio: 3 / 2"><img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Imprensa_Nacional_onde_trabalhou_como_tip%C3%B3grafo%2C_por_Marc_Ferrez.jpg" alt="Fachada do prédio da Imprensa Nacional no Rio de Janeiro, no século XIX" loading="lazy" referrerpolicy="no-referrer"></div>
+            <figcaption class="legenda">Imprensa Nacional, no Rio de Janeiro, onde Machado de Assis começou como aprendiz de tipógrafo. Foto de Marc Ferrez, c. 1886. Marc Ferrez · domínio público · Wikimedia Commons.</figcaption>
+          </figure>
+        </div>
+        <div class="duas-colunas__dir">
+          <p class="eyebrow" data-anim="fade">Trajetória</p>
+          <h3 id="titulo-trajetoria" class="titulo-medio" data-anim="linhas">Trajetória de vida e literária</h3>
+          <p class="texto" style="margin-top: 2rem" data-anim="palavras" data-passo="10">A trajetória de Machado de Assis foi construída em diferentes espaços da vida cultural do Rio de Janeiro do século XIX. Ele começou na tipografia e no jornalismo, colaborou em revistas e jornais, exerceu funções públicas e manteve uma produção literária constante.</p>
+          <p class="texto" data-anim="palavras" data-passo="10">Em 1864, publicou Crisálidas, seu primeiro livro de poesias. Em 1872, publicou Ressurreição, seu primeiro romance. Nas décadas seguintes, lançou obras que mostram uma mudança gradual em sua maneira de escrever. Os romances iniciais apresentam maior proximidade com convenções românticas. Já os livros da fase madura desenvolvem uma ironia mais intensa, uma análise psicológica mais complexa e uma crítica mais incisiva das relações sociais.</p>
+          <p class="texto" data-anim="palavras" data-passo="10">Em 1897, Machado de Assis participou da instalação da Academia Brasileira de Letras e foi eleito o primeiro presidente da instituição. A Academia tornou-se uma parte importante de sua trajetória pública e passou a ser conhecida também como “Casa de Machado de Assis”. <sup><a href="#ref-1">[1]</a></sup></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--cinza" aria-labelledby="titulo-carac">
+      <div class="container">
+        <div class="cabeca-linha">
+          <div class="cabeca-secao">
+            <p class="eyebrow" data-anim="fade">Estilo</p>
+            <h3 id="titulo-carac" class="titulo-secao" data-anim="linhas">Características da <span class="acento">escrita</span></h3>
+          </div>
+          <div>
+            <p class="texto" data-anim="fade">A escrita de Machado de Assis é marcada pela atenção aos pensamentos, desejos e contradições das personagens. Em vez de apresentar apenas acontecimentos, seus narradores frequentemente comentam o próprio ato de narrar e convidam o leitor a desconfiar das versões apresentadas.</p>
+            <p class="texto" data-anim="fade">Entre as principais características de sua obra estão:</p>
+          </div>
+        </div>
+        <div class="cartoes">
+          <article class="cartao" data-anim="fade-up" data-atraso="0">
+            <span class="cartao__num" aria-hidden="true">01</span>
+            <h4 class="cartao__titulo">Ironia</h4>
+            <p class="cartao__texto">O texto pode dizer uma coisa e sugerir outra, levando o leitor a observar criticamente as situações narradas.</p>
+          </article>
+          <article class="cartao" data-anim="fade-up" data-atraso="90">
+            <span class="cartao__num" aria-hidden="true">02</span>
+            <h4 class="cartao__titulo">Análise psicológica</h4>
+            <p class="cartao__texto">As personagens são apresentadas por meio de suas dúvidas, ambições, medos, desejos e justificativas.</p>
+          </article>
+          <article class="cartao" data-anim="fade-up" data-atraso="180">
+            <span class="cartao__num" aria-hidden="true">03</span>
+            <h4 class="cartao__titulo">Crítica social</h4>
+            <p class="cartao__texto">Os romances e contos observam relações de classe, dinheiro, poder, casamento, dependência e aparência.</p>
+          </article>
+          <article class="cartao" data-anim="fade-up" data-atraso="0">
+            <span class="cartao__num" aria-hidden="true">04</span>
+            <h4 class="cartao__titulo">Narradores complexos</h4>
+            <p class="cartao__texto">Nem sempre o narrador é completamente confiável. Sua memória, seus interesses e seus preconceitos podem interferir no relato.</p>
+          </article>
+          <article class="cartao" data-anim="fade-up" data-atraso="90">
+            <span class="cartao__num" aria-hidden="true">05</span>
+            <h4 class="cartao__titulo">Diálogo com o leitor</h4>
+            <p class="cartao__texto">Machado interrompe a narrativa, faz comentários e cria uma relação direta com quem está lendo.</p>
+          </article>
+          <article class="cartao" data-anim="fade-up" data-atraso="180">
+            <span class="cartao__num" aria-hidden="true">06</span>
+            <h4 class="cartao__titulo">Humor e pessimismo</h4>
+            <p class="cartao__texto">Situações engraçadas podem conviver com reflexões sobre a vaidade, a ambição, o egoísmo e a passagem do tempo.</p>
+          </article>
+          <article class="cartao" data-anim="fade-up" data-atraso="0">
+            <span class="cartao__num" aria-hidden="true">07</span>
+            <h4 class="cartao__titulo">Atenção à linguagem</h4>
+            <p class="cartao__texto">A construção das frases, os silêncios, as repetições e as mudanças de tom são importantes para a interpretação das obras.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="destaque destaque--centro destaque--largo tema-escuro" aria-labelledby="titulo-fases">
+      <div class="container">
+        <div class="destaque__texto">
+          <p class="eyebrow" data-anim="fade">Fases literárias</p>
+          <h3 id="titulo-fases" class="destaque__titulo" data-anim="linhas">Machado e as fases literárias</h3>
+          <p class="destaque__corpo" data-anim="palavras">A divisão da obra de Machado de Assis em duas fases é útil para organizar o estudo, mas não deve ser entendida como uma separação absoluta.</p>
+          <div class="destaque__colunas" data-anim="fade-up">
+            <p class="destaque__corpo">A primeira fase, geralmente associada à aproximação com o Romantismo, inclui os romances Ressurreição, A Mão e a Luva, Helena e Iaiá Garcia. Nessas obras aparecem conflitos amorosos, relações familiares, expectativas de casamento e observação dos costumes sociais. Ao mesmo tempo, Machado já demonstra interesse pela análise psicológica e pelas tensões entre sentimento, interesse e posição social. <sup><a href="#ref-1">[1]</a></sup></p>
+            <p class="destaque__corpo">A fase madura é frequentemente relacionada ao Realismo e começa, em muitos estudos, com Memórias Póstumas de Brás Cubas. Nessa etapa, a ironia, a crítica social, a complexidade dos narradores e a reflexão sobre a linguagem ganham força. A Academia Brasileira de Letras, porém, observa que as obras-primas dessa fase escapam a uma denominação rígida de escola literária. <sup><a href="#ref-1">[1]</a></sup></p>
+          </div>
+          <p class="destaque__corpo" data-anim="palavras">Por isso, neste site, os períodos serão usados como uma forma de organização histórica e didática. Cada obra será apresentada em seu contexto, sem afirmar que uma classificação literária explica tudo o que existe nela.</p>
+          <div class="botoes" data-anim="fade-up" data-atraso="300">
+            <a class="btn btn--solido" href="obras.html">Ver todas as obras <span class="btn__seta" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="titulo-linha">
+      <div class="container grade-12">
+        <div class="processo__esq">
+          <div class="cabeca-secao">
+            <p class="eyebrow" data-anim="fade">1839 — 1908</p>
+            <h3 id="titulo-linha" class="titulo-secao" data-anim="linhas">Linha do <span class="acento">tempo</span></h3>
+          </div>
+        </div>
+        <div class="processo__dir">
+          <ol class="passos passos--anos">
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1839">1839</time>
+              <p class="passos__corpo passos__texto">Machado de Assis nasce no Rio de Janeiro, em 21 de junho.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1854">1854</time>
+              <p class="passos__corpo passos__texto">Publica seu primeiro trabalho literário conhecido, o soneto “À Ilma. Sra. D. P. J. A.”.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1856">1856</time>
+              <p class="passos__corpo passos__texto">Entra para a Imprensa Nacional como aprendiz de tipógrafo.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1858">1858</time>
+              <p class="passos__corpo passos__texto">Atua como revisor e colaborador do Correio Mercantil.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1860">1860</time>
+              <p class="passos__corpo passos__texto">Passa a colaborar com o Diário do Rio de Janeiro.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1864">1864</time>
+              <p class="passos__corpo passos__texto">Publica Crisálidas, seu primeiro livro de poesias.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1869">1869</time>
+              <p class="passos__corpo passos__texto">Casa-se com Carolina Augusta Xavier de Novais.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1872">1872</time>
+              <p class="passos__corpo passos__texto">Publica <a href="obras/ressurreicao.html">Ressurreição</a>, seu primeiro romance.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1876">1876</time>
+              <p class="passos__corpo passos__texto">Publica <a href="obras/helena.html">Helena</a>.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1878">1878</time>
+              <p class="passos__corpo passos__texto">Publica <a href="obras/iaia-garcia.html">Iaiá Garcia</a>.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1881">1881</time>
+              <p class="passos__corpo passos__texto">Publica <a href="obras/memorias-postumas.html">Memórias Póstumas de Brás Cubas</a>.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1882">1882</time>
+              <p class="passos__corpo passos__texto">Publica Papéis Avulsos, uma de suas coletâneas de contos mais conhecidas.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1897">1897</time>
+              <p class="passos__corpo passos__texto">Participa da instalação da Academia Brasileira de Letras e é eleito seu primeiro presidente.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1899">1899</time>
+              <p class="passos__corpo passos__texto">Publica <a href="obras/dom-casmurro.html">Dom Casmurro</a>.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1904">1904</time>
+              <p class="passos__corpo passos__texto">Publica <a href="obras/esau-e-jaco.html">Esaú e Jacó</a>.</p>
+            </li>
+            <li data-anim="fade-up">
+              <time class="passos__num" datetime="1908">1908</time>
+              <p class="passos__corpo passos__texto">Publica <a href="obras/memorial-de-aires.html">Memorial de Aires</a> e morre no Rio de Janeiro, em 29 de setembro. <sup><a href="#ref-1">[1]</a></sup> <sup><a href="#ref-2">[2]</a></sup></p>
+            </li>
+          </ol>
+          <!-- Sugestão visual (não exibir ao visitante): usar pequenas imagens documentais na linha do tempo — retrato de Machado, capa de Crisálidas, folha de rosto de Ressurreição, fotografia da Academia Brasileira de Letras e capas das obras principais. Cada imagem deve ter crédito e texto alternativo. -->
+        </div>
+      </div>
+    </section>
+
+    <section id="referencias" class="secao secao--cinza" aria-labelledby="titulo-refs">
+      <div class="container">
+        <div class="cabeca-secao">
+          <p class="eyebrow" data-anim="fade">Fontes</p>
+          <h2 id="titulo-refs" class="titulo-secao titulo-secao--largo" data-anim="linhas">Referências das informações e das <span class="acento">citações</span></h2>
+        </div>
+        <ul class="lista-num lista-num--pequena">
+          <li id="ref-1" data-anim="fade-up" data-atraso="0">
+            <span class="lista-num__num">01</span>
+            <span class="lista-num__texto">Academia Brasileira de Letras — Biografia de Machado de Assis <!-- Inserir o link para a fonte. --></span>
+          </li>
+          <li id="ref-2" data-anim="fade-up" data-atraso="80">
+            <span class="lista-num__num">02</span>
+            <span class="lista-num__texto">Ministério da Educação — Machado de Assis: Vida e Obra <!-- Inserir o link para a fonte. --></span>
+          </li>
+          <li id="ref-3" data-anim="fade-up" data-atraso="160">
+            <span class="lista-num__num">03</span>
+            <span class="lista-num__texto">Academia Brasileira de Letras — Bibliografia de Machado de Assis <!-- Inserir o link para a fonte. --></span>
+          </li>
+          <li id="ref-4" data-anim="fade-up" data-atraso="0">
+            <span class="lista-num__num">04</span>
+            <span class="lista-num__texto">Machado de Assis.net — Ressurreição <!-- Inserir o link para a fonte. --></span>
+          </li>
+          <li id="ref-5" data-anim="fade-up" data-atraso="80">
+            <span class="lista-num__num">05</span>
+            <span class="lista-num__texto">Biblioteca Nacional Digital — A Mão e a Luva <!-- Inserir o link para a fonte. --></span>
+          </li>
+          <li id="ref-6" data-anim="fade-up" data-atraso="160">
+            <span class="lista-num__num">06</span>
+            <span class="lista-num__texto">Machado de Assis.net — Helena <!-- Inserir o link para a fonte. --></span>
+          </li>
+          <li id="ref-7" data-anim="fade-up" data-atraso="0">
+            <span class="lista-num__num">07</span>
+            <span class="lista-num__texto">Machado de Assis.net — Iaiá Garcia <!-- Inserir o link para a fonte. --></span>
+          </li>
+          <li id="ref-8" data-anim="fade-up" data-atraso="80">
+            <span class="lista-num__num">08</span>
+            <span class="lista-num__texto">Wikisource — Memórias Póstumas de Brás Cubas, prefácio da edição de 1881 <!-- Inserir o link para a fonte. --></span>
+          </li>
+          <li id="ref-9" data-anim="fade-up" data-atraso="160">
+            <span class="lista-num__num">09</span>
+            <span class="lista-num__texto">Machado de Assis.net — Quincas Borba <!-- Inserir o link para a fonte. --></span>
+          </li>
+          <li id="ref-10" data-anim="fade-up" data-atraso="0">
+            <span class="lista-num__num">10</span>
+            <span class="lista-num__texto">Machado de Assis.net — Dom Casmurro <!-- Inserir o link para a fonte. --></span>
+          </li>
+          <li id="ref-11" data-anim="fade-up" data-atraso="80">
+            <span class="lista-num__num">11</span>
+            <span class="lista-num__texto">Machado de Assis.net — Esaú e Jacó <!-- Inserir o link para a fonte. --></span>
+          </li>
+          <li id="ref-12" data-anim="fade-up" data-atraso="160">
+            <span class="lista-num__num">12</span>
+            <span class="lista-num__texto">Machado de Assis.net — Memorial de Aires <!-- Inserir o link para a fonte. --></span>
+          </li>
+          <li id="ref-13" data-anim="fade-up" data-atraso="0">
+            <span class="lista-num__num">13</span>
+            <span class="lista-num__texto">Machado de Assis.net — Casa Velha <!-- Inserir o link para a fonte. --></span>
+          </li>
+        </ul>
+
+        <section id="creditos" style="margin-top: 6rem; scroll-margin-top: 6rem" aria-labelledby="titulo-creditos">
+          <h3 id="titulo-creditos" class="eyebrow" data-anim="fade">Créditos das imagens</h3>
+          <ul class="lista-num lista-num--pequena lista-num--2" style="margin-top: 2rem">
+            <li>
+              <span class="lista-num__num">01</span>
+              <span class="lista-num__texto">Machado de Assis, fotografado por Marc Ferrez, c. 1890.<span class="lista-num__nota">Marc Ferrez · domínio público · Wikimedia Commons · <a href="https://commons.wikimedia.org/wiki/File:Machado_de_Assis_by_Marc_Ferrez_(cropped_3x4).jpg" target="_blank" rel="noopener noreferrer">ver arquivo original</a></span></span>
+            </li>
+            <li>
+              <span class="lista-num__num">02</span>
+              <span class="lista-num__texto">Machado de Assis em 1904. Fundo Correio da Manhã.<span class="lista-num__nota">Autor desconhecido · domínio público · Wikimedia Commons · <a href="https://commons.wikimedia.org/wiki/File:Machado_de_Assis_1904.jpg" target="_blank" rel="noopener noreferrer">ver arquivo original</a></span></span>
+            </li>
+            <li>
+              <span class="lista-num__num">03</span>
+              <span class="lista-num__texto">Aos 35 anos, em 1874.<span class="lista-num__nota">Autor desconhecido · domínio público · Wikimedia Commons · <a href="https://commons.wikimedia.org/wiki/File:Machado_de_assis_1874.jpg" target="_blank" rel="noopener noreferrer">ver arquivo original</a></span></span>
+            </li>
+            <li>
+              <span class="lista-num__num">04</span>
+              <span class="lista-num__texto">Aos 57 anos, c. 1896.<span class="lista-num__nota">Autor desconhecido · domínio público · Wikimedia Commons · <a href="https://commons.wikimedia.org/wiki/File:Machado_de_Assis_aos_57_anos.jpg" target="_blank" rel="noopener noreferrer">ver arquivo original</a></span></span>
+            </li>
+            <li>
+              <span class="lista-num__num">05</span>
+              <span class="lista-num__texto">Aos 66 anos, retrato pintado por Henrique Bernardelli, 1905.<span class="lista-num__nota">Henrique Bernardelli · domínio público · Wikimedia Commons · <a href="https://commons.wikimedia.org/wiki/File:Retrato_de_Machado_de_Assis_(1905),_por_H._Bernardelli.jpg" target="_blank" rel="noopener noreferrer">ver arquivo original</a></span></span>
+            </li>
+            <li>
+              <span class="lista-num__num">06</span>
+              <span class="lista-num__texto">Imprensa Nacional, no Rio de Janeiro, onde Machado de Assis começou como aprendiz de tipógrafo. Foto de Marc Ferrez, c. 1886.<span class="lista-num__nota">Marc Ferrez · domínio público · Wikimedia Commons · <a href="https://commons.wikimedia.org/wiki/File:Imprensa_Nacional_onde_trabalhou_como_tip%C3%B3grafo,_por_Marc_Ferrez.jpg" target="_blank" rel="noopener noreferrer">ver arquivo original</a></span></span>
+            </li>
+            <li>
+              <span class="lista-num__num">07</span>
+              <span class="lista-num__texto">Autógrafo de Joaquim Maria Machado de Assis, 1904.<span class="lista-num__nota">Domínio público · Wikimedia Commons · <a href="https://commons.wikimedia.org/wiki/File:Aut%C3%B3grafo_de_Joaquim_Maria_Machado_de_Assis.png" target="_blank" rel="noopener noreferrer">ver arquivo original</a></span></span>
+            </li>
+            <li>
+              <span class="lista-num__num">08</span>
+              <span class="lista-num__texto">Helena, primeira edição, 1876.<span class="lista-num__nota">Domínio público · Wikimedia Commons · <a href="https://commons.wikimedia.org/wiki/File:Helena_-_Machado_de_Assis_(Capa_da_1%C2%AA_edi%C3%A7%C3%A3o).jpg" target="_blank" rel="noopener noreferrer">ver arquivo original</a></span></span>
+            </li>
+            <li>
+              <span class="lista-num__num">09</span>
+              <span class="lista-num__texto">Iaiá Garcia, primeira edição, 1878.<span class="lista-num__nota">Domínio público · Wikimedia Commons · <a href="https://commons.wikimedia.org/wiki/File:Iaia_garcia_1a_edicao.png" target="_blank" rel="noopener noreferrer">ver arquivo original</a></span></span>
+            </li>
+            <li>
+              <span class="lista-num__num">10</span>
+              <span class="lista-num__texto">Dom Casmurro, primeira edição, Livraria Garnier, 1899.<span class="lista-num__nota">Livraria Garnier · domínio público · Wikimedia Commons · <a href="https://commons.wikimedia.org/wiki/File:DomCasmurroMachadodeAssis.jpg" target="_blank" rel="noopener noreferrer">ver arquivo original</a></span></span>
+            </li>
+            <li>
+              <span class="lista-num__num">11</span>
+              <span class="lista-num__texto">Esaú e Jacó, primeira edição, 1904.<span class="lista-num__nota">Domínio público · Wikimedia Commons · <a href="https://commons.wikimedia.org/wiki/File:Esau_e_Jaco.jpg" target="_blank" rel="noopener noreferrer">ver arquivo original</a></span></span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div class="rodape__marca" data-anim="fade-up">
+          <a class="logo" href="index.html">
+            <span class="logo__marca" aria-hidden="true"></span>
+            <span class="logo__texto">machado de assis</span>
+          </a>
+          <p class="rodape__frase">Machado de Assis: Vida, Obras e Pensamento</p>
+          <p class="rodape__sobre">Projeto acadêmico sobre a vida, a produção literária e a importância de Machado de Assis para a literatura brasileira.</p>
+          <img class="rodape__assinatura" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Aut%C3%B3grafo_de_Joaquim_Maria_Machado_de_Assis.png/500px-Aut%C3%B3grafo_de_Joaquim_Maria_Machado_de_Assis.png" alt="Assinatura manuscrita de Machado de Assis" loading="lazy" referrerpolicy="no-referrer">
+        </div>
+        <div class="rodape__col">
+          <p class="rodape__titulo">Páginas</p>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#sobre">Sobre Machado</a></li>
+            <li><a href="obras.html">Obras</a></li>
+            <li><a href="conversa.html">Converse com Machado</a></li>
+            <li><a href="opinioes.html">Opiniões e Resenhas</a></li>
+          </ul>
+        </div>
+        <div class="rodape__col">
+          <p class="rodape__titulo">Leituras</p>
+          <ul>
+            <li><a href="obras/memorias-postumas.html">Memórias Póstumas</a></li>
+            <li><a href="obras/dom-casmurro.html">Dom Casmurro</a></li>
+            <li><a href="obras/quincas-borba.html">Quincas Borba</a></li>
+            <li><a href="obras/helena.html">Helena</a></li>
+          </ul>
+        </div>
+        <div class="rodape__col">
+          <p class="rodape__titulo">Fontes</p>
+          <ul>
+            <li><a href="index.html#referencias">Referências bibliográficas</a></li>
+            <li><a href="index.html#creditos">Créditos das imagens</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodape__gigante" aria-hidden="true" data-anim="fade-up">Machado</div>
+      <div class="rodape__legal">
+        <p>Fontes e créditos: consulte as <a href="index.html#referencias">referências bibliográficas</a> e os <a href="index.html#creditos">créditos das imagens</a> utilizados neste site.</p>
+        <p>Projeto acadêmico · 2026</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

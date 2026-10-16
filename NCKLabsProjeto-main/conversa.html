@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converse com Machado | Machado de Assis: Vida, Obras e Pensamento</title>
+  <meta name="description" content="Assistente de estudos para tirar dúvidas sobre a vida e a obra de Machado de Assis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&amp;display=swap">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&amp;display=swap">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script>
+    // Ativa as animações apenas com JavaScript e sem a preferência "reduzir movimento".
+    // Se o script principal não carregar em 4 s, o conteúdo aparece sem animação.
+    document.documentElement.classList.add("js");
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anim");
+    setTimeout(function () { if (!window.__machadoPronto) document.documentElement.classList.remove("anim"); }, 4000);
+  </script>
+  <script id="lenis-js" src="https://unpkg.com/lenis@1.3.19/dist/lenis.min.js" async></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/dados-obras.js" defer></script>
+  <script src="js/conversa.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <a class="logo" href="index.html" aria-label="Machado de Assis: Vida, Obras e Pensamento — página inicial">
+      <span class="logo__marca" aria-hidden="true"></span>
+      <span class="logo__texto">machado de assis</span>
+    </a>
+    <div class="cabecalho__direita">
+      <nav class="cabecalho__nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Página inicial</a></li>
+          <li><a href="obras.html">Obras</a></li>
+          <li><a href="conversa.html" aria-current="page">Converse com Machado</a></li>
+          <li><a href="opinioes.html">Opiniões e Resenhas</a></li>
+        </ul>
+      </nav>
+      <button class="botao-menu" type="button" aria-expanded="false" aria-controls="menu-modal" aria-label="Abrir menu">
+        <span class="botao-menu__texto">Menu</span>
+        <span class="botao-menu__icone" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="titulo-conversa">
+      <div class="container grade-12">
+        <div class="hero__texto">
+          <p class="eyebrow" data-anim="fade">Assistente de estudos</p>
+          <h1 id="titulo-conversa" class="hero__titulo" data-anim="linhas" data-passo="140">Converse com <span class="acento">Machado</span></h1>
+          <p class="hero__lead texto texto--lg" data-anim="palavras" data-atraso="500" data-passo="18">Bem-vindo ao Converse com Machado, um espaço de apoio à leitura e ao estudo da obra de Machado de Assis.</p>
+          <p class="texto" style="margin-top: 1.5rem" data-anim="fade" data-atraso="800">Aqui, você pode fazer perguntas sobre a vida do autor, seus romances, seus contos, seus personagens, os períodos literários e os temas presentes em sua escrita.</p>
+          <p class="texto" data-anim="fade" data-atraso="900">Pergunte sobre uma obra específica, peça uma explicação sobre um personagem ou compare as características da primeira fase com as da fase madura.</p>
+          <!-- Sugestão visual (não exibir ao visitante): usar uma ilustração discreta de Machado de Assis ao lado de uma caixa de diálogo. A ilustração não deve sugerir que a resposta foi escrita pelo próprio autor. O rótulo "Assistente de estudos" aparece próximo ao chat para deixar clara a natureza da ferramenta. -->
+        </div>
+        <div class="hero__imagem" data-anim="placa" data-atraso="200">
+          <section class="chat" aria-labelledby="titulo-chat">
+            <div class="chat__topo">
+              <h2 id="titulo-chat" class="chat__rotulo">Assistente de estudos</h2>
+              <span class="chat__estado">Não é Machado de Assis</span>
+            </div>
+            <div class="chat__mensagens" id="chat-mensagens" aria-live="polite">
+              <p class="chat__vazio">Ainda não há uma pergunta. Escolha um dos exemplos abaixo ou escreva sua própria pergunta sobre Machado de Assis.</p>
+            </div>
+            <form class="chat__form" id="chat-form">
+              <label for="pergunta">Digite sua pergunta sobre Machado de Assis:</label>
+              <textarea id="pergunta" name="pergunta" rows="2" placeholder="Ex.: Quem é Capitu?" required></textarea>
+              <div class="botoes">
+                <button class="btn btn--solido" type="submit">Enviar pergunta <span class="btn__seta" aria-hidden="true">→</span></button>
+              </div>
+            </form>
+            <p class="chat__rodape">Pode cometer erros. Confira nas obras e nas fontes do site.</p>
+            <!-- Mensagem de erro (usada pelo script quando não houver resposta): Não foi possível responder neste momento. Tente reformular a pergunta ou consulte a página de obras e as referências do site. -->
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="titulo-exemplos">
+      <div class="container">
+        <div class="cabeca-secao">
+          <p class="eyebrow" data-anim="fade">Para começar</p>
+          <h2 id="titulo-exemplos" class="titulo-secao" data-anim="linhas">Exemplos de <span class="acento">perguntas</span></h2>
+        </div>
+        <ul class="perguntas">
+          <li data-anim="fade-up" data-atraso="0">
+            <button type="button" class="pergunta-sugerida" data-pergunta="Qual é a importância de Memórias Póstumas de Brás Cubas?">
+              <span class="lista-num__num">01</span>
+              <span class="perguntas__texto">Qual é a importância de Memórias Póstumas de Brás Cubas?</span>
+              <span class="perguntas__seta" aria-hidden="true">→</span>
+            </button>
+          </li>
+          <li data-anim="fade-up" data-atraso="80">
+            <button type="button" class="pergunta-sugerida" data-pergunta="Quais são as principais características de Dom Casmurro?">
+              <span class="lista-num__num">02</span>
+              <span class="perguntas__texto">Quais são as principais características de Dom Casmurro?</span>
+              <span class="perguntas__seta" aria-hidden="true">→</span>
+            </button>
+          </li>
+          <li data-anim="fade-up" data-atraso="0">
+            <button type="button" class="pergunta-sugerida" data-pergunta="Por que a narrativa de Dom Casmurro é considerada ambígua?">
+              <span class="lista-num__num">03</span>
+              <span class="perguntas__texto">Por que a narrativa de Dom Casmurro é considerada ambígua?</span>
+              <span class="perguntas__seta" aria-hidden="true">→</span>
+            </button>
+          </li>
+          <li data-anim="fade-up" data-atraso="80">
+            <button type="button" class="pergunta-sugerida" data-pergunta="Qual é a diferença entre a primeira fase e a fase madura de Machado de Assis?">
+              <span class="lista-num__num">04</span>
+              <span class="perguntas__texto">Qual é a diferença entre a primeira fase e a fase madura de Machado de Assis?</span>
+              <span class="perguntas__seta" aria-hidden="true">→</span>
+            </button>
+          </li>
+          <li data-anim="fade-up" data-atraso="0">
+            <button type="button" class="pergunta-sugerida" data-pergunta="Quem é o narrador de Memorial de Aires?">
+              <span class="lista-num__num">05</span>
+              <span class="perguntas__texto">Quem é o narrador de Memorial de Aires?</span>
+              <span class="perguntas__seta" aria-hidden="true">→</span>
+            </button>
+          </li>
+          <li data-anim="fade-up" data-atraso="80">
+            <button type="button" class="pergunta-sugerida" data-pergunta="O que o Humanitismo representa em Quincas Borba?">
+              <span class="lista-num__num">06</span>
+              <span class="perguntas__texto">O que o Humanitismo representa em Quincas Borba?</span>
+              <span class="perguntas__seta" aria-hidden="true">→</span>
+            </button>
+          </li>
+          <li data-anim="fade-up" data-atraso="0">
+            <button type="button" class="pergunta-sugerida" data-pergunta="Quais temas aparecem em Helena?">
+              <span class="lista-num__num">07</span>
+              <span class="perguntas__texto">Quais temas aparecem em Helena?</span>
+              <span class="perguntas__seta" aria-hidden="true">→</span>
+            </button>
+          </li>
+          <li data-anim="fade-up" data-atraso="80">
+            <button type="button" class="pergunta-sugerida" data-pergunta="Qual obra de Machado é recomendada para quem está começando a ler o autor?">
+              <span class="lista-num__num">08</span>
+              <span class="perguntas__texto">Qual obra de Machado é recomendada para quem está começando a ler o autor?</span>
+              <span class="perguntas__seta" aria-hidden="true">→</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="destaque destaque--centro tema-escuro" aria-labelledby="titulo-aviso">
+      <div class="container">
+        <div class="destaque__texto">
+          <p class="eyebrow" data-anim="fade">Aviso</p>
+          <h2 id="titulo-aviso" class="destaque__titulo" data-anim="linhas">Aviso sobre a inteligência <span class="acento">artificial</span></h2>
+          <p class="destaque__corpo" data-anim="palavras">Este assistente é uma ferramenta de apoio aos estudos. Ele pode cometer erros, simplificar interpretações ou apresentar informações imprecisas. Consulte as obras e as fontes indicadas no site antes de utilizar uma resposta em um trabalho acadêmico. A inteligência artificial não substitui a leitura dos livros nem a orientação de um professor.</p>
+          <div class="botoes" data-anim="fade-up" data-atraso="300">
+            <a class="btn btn--solido" href="obras.html">Consultar as obras <span class="btn__seta" aria-hidden="true">→</span></a>
+            <a class="btn btn--vazado" href="index.html#referencias">Ver as fontes <span class="btn__seta" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div class="rodape__marca" data-anim="fade-up">
+          <a class="logo" href="index.html">
+            <span class="logo__marca" aria-hidden="true"></span>
+            <span class="logo__texto">machado de assis</span>
+          </a>
+          <p class="rodape__frase">Machado de Assis: Vida, Obras e Pensamento</p>
+          <p class="rodape__sobre">Projeto acadêmico sobre a vida, a produção literária e a importância de Machado de Assis para a literatura brasileira.</p>
+          <img class="rodape__assinatura" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Aut%C3%B3grafo_de_Joaquim_Maria_Machado_de_Assis.png/500px-Aut%C3%B3grafo_de_Joaquim_Maria_Machado_de_Assis.png" alt="Assinatura manuscrita de Machado de Assis" loading="lazy" referrerpolicy="no-referrer">
+        </div>
+        <div class="rodape__col">
+          <p class="rodape__titulo">Páginas</p>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#sobre">Sobre Machado</a></li>
+            <li><a href="obras.html">Obras</a></li>
+            <li><a href="conversa.html">Converse com Machado</a></li>
+            <li><a href="opinioes.html">Opiniões e Resenhas</a></li>
+          </ul>
+        </div>
+        <div class="rodape__col">
+          <p class="rodape__titulo">Leituras</p>
+          <ul>
+            <li><a href="obras/memorias-postumas.html">Memórias Póstumas</a></li>
+            <li><a href="obras/dom-casmurro.html">Dom Casmurro</a></li>
+            <li><a href="obras/quincas-borba.html">Quincas Borba</a></li>
+            <li><a href="obras/helena.html">Helena</a></li>
+          </ul>
+        </div>
+        <div class="rodape__col">
+          <p class="rodape__titulo">Fontes</p>
+          <ul>
+            <li><a href="index.html#referencias">Referências bibliográficas</a></li>
+            <li><a href="index.html#creditos">Créditos das imagens</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodape__gigante" aria-hidden="true" data-anim="fade-up">Machado</div>
+      <div class="rodape__legal">
+        <p>Fontes e créditos: consulte as <a href="index.html#referencias">referências bibliográficas</a> e os <a href="index.html#creditos">créditos das imagens</a> utilizados neste site.</p>
+        <p>Projeto acadêmico · 2026</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

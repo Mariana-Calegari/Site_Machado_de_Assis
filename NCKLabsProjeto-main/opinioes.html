@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opiniões e Resenhas | Machado de Assis: Vida, Obras e Pensamento</title>
+  <meta name="description" content="Leia e compartilhe opiniões e resenhas sobre as obras de Machado de Assis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&amp;display=swap">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&amp;display=swap">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script>
+    // Ativa as animações apenas com JavaScript e sem a preferência "reduzir movimento".
+    // Se o script principal não carregar em 4 s, o conteúdo aparece sem animação.
+    document.documentElement.classList.add("js");
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anim");
+    setTimeout(function () { if (!window.__machadoPronto) document.documentElement.classList.remove("anim"); }, 4000);
+  </script>
+  <script id="lenis-js" src="https://unpkg.com/lenis@1.3.19/dist/lenis.min.js" async></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/dados-obras.js" defer></script>
+  <script src="js/opinioes.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <a class="logo" href="index.html" aria-label="Machado de Assis: Vida, Obras e Pensamento — página inicial">
+      <span class="logo__marca" aria-hidden="true"></span>
+      <span class="logo__texto">machado de assis</span>
+    </a>
+    <div class="cabecalho__direita">
+      <nav class="cabecalho__nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Página inicial</a></li>
+          <li><a href="obras.html">Obras</a></li>
+          <li><a href="conversa.html">Converse com Machado</a></li>
+          <li><a href="opinioes.html" aria-current="page">Opiniões e Resenhas</a></li>
+        </ul>
+      </nav>
+      <button class="botao-menu" type="button" aria-expanded="false" aria-controls="menu-modal" aria-label="Abrir menu">
+        <span class="botao-menu__texto">Menu</span>
+        <span class="botao-menu__icone" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero hero--sem-imagem" aria-labelledby="titulo-opinioes">
+      <div class="container grade-12 hero__grade">
+        <div class="hero__texto">
+          <p class="eyebrow" data-anim="fade">Leitores</p>
+          <h1 id="titulo-opinioes" class="hero__titulo" data-anim="linhas" data-passo="140">Opiniões e <span class="acento">Resenhas</span></h1>
+          <p class="hero__lead texto texto--lg" data-anim="palavras" data-atraso="500" data-passo="18">Você já leu alguma obra de Machado de Assis? Compartilhe sua opinião com outros leitores.</p>
+          <div class="botoes" data-anim="fade-up" data-atraso="800">
+            <a class="btn btn--solido" href="#titulo-form">Escrever uma resenha <span class="btn__seta" aria-hidden="true">→</span></a>
+            <a class="btn btn--vazado" href="#avaliacoes">Ler as avaliações <span class="btn__seta" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="hero__lateral" data-anim="fade" data-atraso="1000">
+          <p class="texto">Escreva uma resenha, registre suas impressões ou conte qual personagem, tema ou passagem mais chamou sua atenção. Sua contribuição pode ajudar outras pessoas a escolher uma obra e iniciar uma conversa sobre literatura.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="titulo-form">
+      <div class="container grade-12 duas-colunas duas-colunas--meio">
+        <div class="duas-colunas__esq">
+          <p class="eyebrow" data-anim="fade">Formulário</p>
+          <h2 id="titulo-form" class="titulo-medio" style="scroll-margin-top: 8rem" data-anim="linhas">Deixe sua opinião sobre uma <span class="acento">obra</span></h2>
+          <section aria-labelledby="titulo-regras">
+            <h3 id="titulo-regras" class="eyebrow" style="margin-top: 4rem" data-anim="fade">Regras de participação</h3>
+            <ul class="regras" style="margin-top: 1.5rem" data-anim="fade-up">
+              <li>Não publique informações pessoais.</li>
+              <li>Respeite opiniões diferentes da sua.</li>
+              <li>Não use linguagem ofensiva ou discriminatória.</li>
+              <li>Avise quando sua resenha revelar acontecimentos importantes da obra.</li>
+              <li>Publique comentários relacionados à literatura e ao conteúdo do site.</li>
+            </ul>
+          </section>
+        </div>
+        <div class="duas-colunas__dir" data-anim="fade-up" data-atraso="200">
+          <!-- Nesta versão, as opiniões ficam salvas apenas no navegador de quem escreveu (localStorage).
+               Para publicar para todos os visitantes e moderar as opiniões, será preciso um serviço externo (back-end). -->
+          <form class="form" id="form-opiniao" novalidate>
+            <div class="campo">
+              <label for="nome">Nome ou apelido</label>
+              <input type="text" id="nome" name="nome" maxlength="60" autocomplete="nickname" required>
+            </div>
+            <div class="campo">
+              <label for="obra">Obra lida</label>
+              <select id="obra" name="obra" required>
+                <option value="">Selecione uma obra</option>
+                <option value="ressurreicao">Ressurreição</option>
+                <option value="a-mao-e-a-luva">A Mão e a Luva</option>
+                <option value="helena">Helena</option>
+                <option value="iaia-garcia">Iaiá Garcia</option>
+                <option value="memorias-postumas">Memórias Póstumas de Brás Cubas</option>
+                <option value="quincas-borba">Quincas Borba</option>
+                <option value="dom-casmurro">Dom Casmurro</option>
+                <option value="esau-e-jaco">Esaú e Jacó</option>
+                <option value="memorial-de-aires">Memorial de Aires</option>
+                <option value="casa-velha">Casa Velha</option>
+              </select>
+            </div>
+            <fieldset class="grupo">
+              <legend>Nota</legend>
+              <div class="opcoes">
+                <div class="opcao"><input type="radio" id="nota-1" name="nota" value="1" required><label for="nota-1"><span class="estrelas" aria-hidden="true">★</span> 1 estrela — Não gostei</label></div>
+                <div class="opcao"><input type="radio" id="nota-2" name="nota" value="2"><label for="nota-2"><span class="estrelas" aria-hidden="true">★★</span> 2 estrelas — Gostei pouco</label></div>
+                <div class="opcao"><input type="radio" id="nota-3" name="nota" value="3"><label for="nota-3"><span class="estrelas" aria-hidden="true">★★★</span> 3 estrelas — Gostei</label></div>
+                <div class="opcao"><input type="radio" id="nota-4" name="nota" value="4"><label for="nota-4"><span class="estrelas" aria-hidden="true">★★★★</span> 4 estrelas — Gostei muito</label></div>
+                <div class="opcao"><input type="radio" id="nota-5" name="nota" value="5"><label for="nota-5"><span class="estrelas" aria-hidden="true">★★★★★</span> 5 estrelas — Recomendo muito</label></div>
+              </div>
+            </fieldset>
+            <div class="campo">
+              <label for="resenha">Escreva sua opinião ou resenha</label>
+              <textarea id="resenha" name="resenha" rows="7" maxlength="3000" placeholder="Escreva aqui sua opinião, análise ou resenha. Evite revelar o final da obra sem avisar os outros leitores." required></textarea>
+            </div>
+            <fieldset class="grupo">
+              <legend>Você recomendaria esta obra?</legend>
+              <div class="opcoes">
+                <div class="opcao"><input type="radio" id="recomenda-sim" name="recomenda" value="sim" required><label for="recomenda-sim">Sim</label></div>
+                <div class="opcao"><input type="radio" id="recomenda-nao" name="recomenda" value="nao"><label for="recomenda-nao">Não</label></div>
+              </div>
+            </fieldset>
+            <div class="botoes">
+              <button class="btn btn--solido" type="submit">Publicar opinião <span class="btn__seta" aria-hidden="true">→</span></button>
+            </div>
+            <p class="form-msg form-msg--ok" id="msg-sucesso" role="status" hidden>Sua opinião foi enviada. Obrigado por participar da conversa sobre a obra de Machado de Assis.</p>
+            <p class="form-msg" id="msg-erro" role="alert" hidden>Não foi possível enviar sua opinião. Verifique os campos obrigatórios e tente novamente.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes" class="secao secao--cinza" aria-labelledby="titulo-avaliacoes">
+      <div class="container">
+        <div class="cabeca-secao">
+          <p class="eyebrow" data-anim="fade">Leitores</p>
+          <h2 id="titulo-avaliacoes" class="titulo-secao" data-anim="linhas"><span class="acento">Avaliações</span></h2>
+        </div>
+        <!-- Sugestão visual (não exibir ao visitante): cartões simples para as resenhas, mostrando o título da obra, o nome ou apelido do leitor, a nota e o texto, com filtros por obra e por nota. -->
+        <div class="filtros" data-anim="fade-up">
+          <div class="campo">
+            <label for="filtro-obra">Filtrar por obra</label>
+            <select id="filtro-obra">
+              <option value="">Todas as obras</option>
+              <option value="ressurreicao">Ressurreição</option>
+              <option value="a-mao-e-a-luva">A Mão e a Luva</option>
+              <option value="helena">Helena</option>
+              <option value="iaia-garcia">Iaiá Garcia</option>
+              <option value="memorias-postumas">Memórias Póstumas de Brás Cubas</option>
+              <option value="quincas-borba">Quincas Borba</option>
+              <option value="dom-casmurro">Dom Casmurro</option>
+              <option value="esau-e-jaco">Esaú e Jacó</option>
+              <option value="memorial-de-aires">Memorial de Aires</option>
+              <option value="casa-velha">Casa Velha</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="filtro-nota">Filtrar por nota</label>
+            <select id="filtro-nota">
+              <option value="">Todas as notas</option>
+              <option value="1">1 estrela — Não gostei</option>
+              <option value="2">2 estrelas — Gostei pouco</option>
+              <option value="3">3 estrelas — Gostei</option>
+              <option value="4">4 estrelas — Gostei muito</option>
+              <option value="5">5 estrelas — Recomendo muito</option>
+            </select>
+          </div>
+        </div>
+        <div class="resenhas" id="lista-resenhas" aria-live="polite"></div>
+        <p class="vazio" id="resenhas-vazio">Ainda não há avaliações. Que tal escrever a primeira?</p>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="titulo-por-obra">
+      <div class="container grade-12">
+        <div class="acordeoes__esq">
+          <div class="cabeca-secao">
+            <p class="eyebrow" data-anim="fade">Organizados por obra</p>
+            <h2 id="titulo-por-obra" class="titulo-secao" data-anim="linhas">Comentários por <span class="acento">obra</span></h2>
+          </div>
+        </div>
+        <div class="acordeoes__dir">
+          <details class="acordeao" data-obra="ressurreicao" data-anim="fade-up" data-atraso="0">
+            <summary><h3 class="acordeao__pergunta">Ressurreição<span class="acordeao__contagem" data-contagem></span></h3><span class="acordeao__icone" aria-hidden="true">+</span></summary>
+            <div class="acordeao__painel"><div class="acordeao__conteudo" data-lista-obra>
+              <!-- As resenhas aprovadas sobre Ressurreição aparecem aqui: nome ou apelido do leitor, nota e texto. -->
+              <p class="vazio">Ainda não há opiniões sobre esta obra. <a href="#titulo-form">Seja o primeiro a escrever.</a></p>
+            </div></div>
+          </details>
+          <details class="acordeao" data-obra="a-mao-e-a-luva" data-anim="fade-up" data-atraso="80">
+            <summary><h3 class="acordeao__pergunta">A Mão e a Luva<span class="acordeao__contagem" data-contagem></span></h3><span class="acordeao__icone" aria-hidden="true">+</span></summary>
+            <div class="acordeao__painel"><div class="acordeao__conteudo" data-lista-obra>
+              <!-- As resenhas aprovadas sobre A Mão e a Luva aparecem aqui: nome ou apelido do leitor, nota e texto. -->
+              <p class="vazio">Ainda não há opiniões sobre esta obra. <a href="#titulo-form">Seja o primeiro a escrever.</a></p>
+            </div></div>
+          </details>
+          <details class="acordeao" data-obra="helena" data-anim="fade-up" data-atraso="160">
+            <summary><h3 class="acordeao__pergunta">Helena<span class="acordeao__contagem" data-contagem></span></h3><span class="acordeao__icone" aria-hidden="true">+</span></summary>
+            <div class="acordeao__painel"><div class="acordeao__conteudo" data-lista-obra>
+              <!-- As resenhas aprovadas sobre Helena aparecem aqui: nome ou apelido do leitor, nota e texto. -->
+              <p class="vazio">Ainda não há opiniões sobre esta obra. <a href="#titulo-form">Seja o primeiro a escrever.</a></p>
+            </div></div>
+          </details>
+          <details class="acordeao" data-obra="iaia-garcia" data-anim="fade-up" data-atraso="240">
+            <summary><h3 class="acordeao__pergunta">Iaiá Garcia<span class="acordeao__contagem" data-contagem></span></h3><span class="acordeao__icone" aria-hidden="true">+</span></summary>
+            <div class="acordeao__painel"><div class="acordeao__conteudo" data-lista-obra>
+              <!-- As resenhas aprovadas sobre Iaiá Garcia aparecem aqui: nome ou apelido do leitor, nota e texto. -->
+              <p class="vazio">Ainda não há opiniões sobre esta obra. <a href="#titulo-form">Seja o primeiro a escrever.</a></p>
+            </div></div>
+          </details>
+          <details class="acordeao" data-obra="memorias-postumas" data-anim="fade-up" data-atraso="0">
+            <summary><h3 class="acordeao__pergunta">Memórias Póstumas de Brás Cubas<span class="acordeao__contagem" data-contagem></span></h3><span class="acordeao__icone" aria-hidden="true">+</span></summary>
+            <div class="acordeao__painel"><div class="acordeao__conteudo" data-lista-obra>
+              <!-- As resenhas aprovadas sobre Memórias Póstumas de Brás Cubas aparecem aqui: nome ou apelido do leitor, nota e texto. -->
+              <p class="vazio">Ainda não há opiniões sobre esta obra. <a href="#titulo-form">Seja o primeiro a escrever.</a></p>
+            </div></div>
+          </details>
+          <details class="acordeao" data-obra="quincas-borba" data-anim="fade-up" data-atraso="80">
+            <summary><h3 class="acordeao__pergunta">Quincas Borba<span class="acordeao__contagem" data-contagem></span></h3><span class="acordeao__icone" aria-hidden="true">+</span></summary>
+            <div class="acordeao__painel"><div class="acordeao__conteudo" data-lista-obra>
+              <!-- As resenhas aprovadas sobre Quincas Borba aparecem aqui: nome ou apelido do leitor, nota e texto. -->
+              <p class="vazio">Ainda não há opiniões sobre esta obra. <a href="#titulo-form">Seja o primeiro a escrever.</a></p>
+            </div></div>
+          </details>
+          <details class="acordeao" data-obra="dom-casmurro" data-anim="fade-up" data-atraso="160">
+            <summary><h3 class="acordeao__pergunta">Dom Casmurro<span class="acordeao__contagem" data-contagem></span></h3><span class="acordeao__icone" aria-hidden="true">+</span></summary>
+            <div class="acordeao__painel"><div class="acordeao__conteudo" data-lista-obra>
+              <!-- As resenhas aprovadas sobre Dom Casmurro aparecem aqui: nome ou apelido do leitor, nota e texto. -->
+              <p class="vazio">Ainda não há opiniões sobre esta obra. <a href="#titulo-form">Seja o primeiro a escrever.</a></p>
+            </div></div>
+          </details>
+          <details class="acordeao" data-obra="esau-e-jaco" data-anim="fade-up" data-atraso="240">
+            <summary><h3 class="acordeao__pergunta">Esaú e Jacó<span class="acordeao__contagem" data-contagem></span></h3><span class="acordeao__icone" aria-hidden="true">+</span></summary>
+            <div class="acordeao__painel"><div class="acordeao__conteudo" data-lista-obra>
+              <!-- As resenhas aprovadas sobre Esaú e Jacó aparecem aqui: nome ou apelido do leitor, nota e texto. -->
+              <p class="vazio">Ainda não há opiniões sobre esta obra. <a href="#titulo-form">Seja o primeiro a escrever.</a></p>
+            </div></div>
+          </details>
+          <details class="acordeao" data-obra="memorial-de-aires" data-anim="fade-up" data-atraso="0">
+            <summary><h3 class="acordeao__pergunta">Memorial de Aires<span class="acordeao__contagem" data-contagem></span></h3><span class="acordeao__icone" aria-hidden="true">+</span></summary>
+            <div class="acordeao__painel"><div class="acordeao__conteudo" data-lista-obra>
+              <!-- As resenhas aprovadas sobre Memorial de Aires aparecem aqui: nome ou apelido do leitor, nota e texto. -->
+              <p class="vazio">Ainda não há opiniões sobre esta obra. <a href="#titulo-form">Seja o primeiro a escrever.</a></p>
+            </div></div>
+          </details>
+          <details class="acordeao" data-obra="casa-velha" data-anim="fade-up" data-atraso="80">
+            <summary><h3 class="acordeao__pergunta">Casa Velha<span class="acordeao__contagem" data-contagem></span></h3><span class="acordeao__icone" aria-hidden="true">+</span></summary>
+            <div class="acordeao__painel"><div class="acordeao__conteudo" data-lista-obra>
+              <!-- As resenhas aprovadas sobre Casa Velha aparecem aqui: nome ou apelido do leitor, nota e texto. -->
+              <p class="vazio">Ainda não há opiniões sobre esta obra. <a href="#titulo-form">Seja o primeiro a escrever.</a></p>
+            </div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div class="rodape__marca" data-anim="fade-up">
+          <a class="logo" href="index.html">
+            <span class="logo__marca" aria-hidden="true"></span>
+            <span class="logo__texto">machado de assis</span>
+          </a>
+          <p class="rodape__frase">Machado de Assis: Vida, Obras e Pensamento</p>
+          <p class="rodape__sobre">Projeto acadêmico sobre a vida, a produção literária e a importância de Machado de Assis para a literatura brasileira.</p>
+          <img class="rodape__assinatura" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Aut%C3%B3grafo_de_Joaquim_Maria_Machado_de_Assis.png/500px-Aut%C3%B3grafo_de_Joaquim_Maria_Machado_de_Assis.png" alt="Assinatura manuscrita de Machado de Assis" loading="lazy" referrerpolicy="no-referrer">
+        </div>
+        <div class="rodape__col">
+          <p class="rodape__titulo">Páginas</p>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#sobre">Sobre Machado</a></li>
+            <li><a href="obras.html">Obras</a></li>
+            <li><a href="conversa.html">Converse com Machado</a></li>
+            <li><a href="opinioes.html">Opiniões e Resenhas</a></li>
+          </ul>
+        </div>
+        <div class="rodape__col">
+          <p class="rodape__titulo">Leituras</p>
+          <ul>
+            <li><a href="obras/memorias-postumas.html">Memórias Póstumas</a></li>
+            <li><a href="obras/dom-casmurro.html">Dom Casmurro</a></li>
+            <li><a href="obras/quincas-borba.html">Quincas Borba</a></li>
+            <li><a href="obras/helena.html">Helena</a></li>
+          </ul>
+        </div>
+        <div class="rodape__col">
+          <p class="rodape__titulo">Fontes</p>
+          <ul>
+            <li><a href="index.html#referencias">Referências bibliográficas</a></li>
+            <li><a href="index.html#creditos">Créditos das imagens</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodape__gigante" aria-hidden="true" data-anim="fade-up">Machado</div>
+      <div class="rodape__legal">
+        <p>Fontes e créditos: consulte as <a href="index.html#referencias">referências bibliográficas</a> e os <a href="index.html#creditos">créditos das imagens</a> utilizados neste site.</p>
+        <p>Projeto acadêmico · 2026</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
